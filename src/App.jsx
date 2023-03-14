@@ -1,10 +1,11 @@
 import './App.css'
+import Location from './components/Location'
 
 function App() {
 
   return (
     <div className="App">
-      <button className='btn'>Hola</button>
+      <Location/>
     </div>
   )
 }
