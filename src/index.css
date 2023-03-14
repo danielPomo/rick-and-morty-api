@@ -1,0 +1,53 @@
+/* variables */
+
+:root {
+  --page-bg-color: #000000;
+  --button-typography-color: #fbfbfb;
+  --box-bg-color: #3e3c3c;
+  --placeholder-text-color: #9ba4ed;
+  --medium-contrast-color: #5221e6;
+  --default-font: 'Fira Code', monospace;
+  --paragraph-font-size: 20px;
+  --item-font-size: 16px;
+  --title-font-size: 32px;
+  --btn-width: 215px;
+  --btn-height: 60px;
+  --btn-bg-color: #8eff8b;
+  --btn-border-color: rgba(142,255,139,.5);
+  --btn-hover-txt-color: #000000;
+  --btn-hover-bg-color: #8eff8b;
+
+}
+
+/* initilize css */
+
+html {
+box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* reusable classes */
+
+.btn {
+  font-family: var(--default-font);
+  font-size: var(--paragraph-font-size);
+  font-weight: 500;
+  background-color: var(--btn-bg-color);
+  border: 4px solid var(--btn-border-color);
+  width: var(--btn-width);
+  height: var(--btn-height);
+  color: var(--button-typography-color);
+  background-clip: padding-box;
+}
+
+.btn:hover {
+  color: var(--btn-hover-txt-color);
+  background-color: var(--btn-hover-bg-color);
+}
