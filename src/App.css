@@ -1,19 +1,27 @@
+body{
+    font-family: var(--default-font);
+}
+
 .search {
     display: flex;
     align-items: center;
-    padding: 5px;
-    border: 1px solid black;
-    height: 50px;
-    column-gap: 5px;
-}
-
-.search__input, 
-.search__button {
-    max-height: 40px;
+    padding: 0px 10px;
 }
 
 .search__input {
     flex-grow: 1;
+    height: 40px;
+    text-align: center;
+    border: 5px solid var(--btn-border-color);
+    padding: 0 10px;
+    outline: none;
+}
+
+.container {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .location {
@@ -23,7 +31,7 @@
     width: 100%;
     background-color: var(--page-bg-color);
     color: var(--text-light);
-    padding: 10px;
+    padding: 5px;
 }
 
 .location__container {
@@ -54,3 +62,156 @@
     font-size: var(--item-font-size);
 }
 
+.card {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card__wrapper {
+    width: var(--card-width);
+    height: var(--card-height);
+    border: 2px solid var(--btn-border-color);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* max-width: 437px; */
+}
+
+.card__img {
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+}
+
+.card__info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--box-bg-color);
+    flex-grow: 1;
+    color: var(--text-light);
+    border-radius: 0 0 7px 7px;
+}
+
+.card__info--property {
+    color: rgb(94, 94, 94)
+}
+
+.card__info--title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card__img--wrapper {
+    position: relative;
+}
+
+.dead {
+    border-radius: 7px;
+    width: 108px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid var(--btn-border-color);
+    position: absolute;
+    top: 180px;
+    left: calc((var(--card-width) - 100px ) / 2);
+    text-align: center;
+    color: var(--text-light);
+    background-color: rgba(2, 10, 2, .8);
+}
+
+.dead__circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff0000;
+}
+
+.alive {
+    border-radius: 7px;
+    width: 108px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid var(--btn-border-color);
+    position: absolute;
+    top: 180px;
+    left: calc((var(--card-width) - 100px ) / 2);
+    text-align: center;
+    color: var(--text-light);
+    background-color: rgba(2, 10, 2, .8);
+}
+
+.alive__circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ff00;
+}
+
+.App {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/bg-page.png);
+    background-size: cover;
+}
+
+.welcome {
+    color: var(--btn-border-color);
+    text-align: center;
+    text-shadow: 0 2px 5px var(--btn-border-color);
+}
+
+.header {
+    height: 30vh;
+    background-image: url(/logo.svg);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.residents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    .header {
+        height: 310px;
+        background-size: 700px;
+    }
+
+    .search {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+
+        background-size: 800px;
+    }
+
+    .location__container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: max-content;
+    }
+}
+
+.app__container {
+    max-width: 991px;
+}
+@media screen and (min-width: 992px) {
+    .app__container {
+        margin: 0 auto;
+    }
+}

@@ -3,21 +3,22 @@
 :root {
   --page-bg-color: #000000;
   --button-typography-color: #fbfbfb;
-  --box-bg-color: #3e3c3c;
+  --box-bg-color: #b8b8b8;
   --placeholder-text-color: #9ba4ed;
   --medium-contrast-color: #5221e6;
-  --text-light: #eeeeee;
+  --text-light: #ffffff;
   --default-font: 'Fira Code', monospace;
   --item-font-size: 16px;
   --paragraph-font-size: 20px;
   --title-font-size: 32px;
-  --btn-width: 107.5px;
-  --btn-height: 30px;
-  --btn-bg-color: #8eff8b;
-  --btn-border-color: rgba(142,255,139,.5);
+  --btn-width: 40px;
+  --btn-height: 40px;
+  --btn-border-color: #8eff88;
+  --btn-bg-color: rgba(142,255,139,.5);
   --btn-hover-txt-color: #000000;
-  --btn-hover-bg-color: #8eff8b;
-
+  --btn-hover-bg-color: #8eff88;
+  --card-width: 240px;
+  --card-height: 400px
 }
 
 /* initilize css */
